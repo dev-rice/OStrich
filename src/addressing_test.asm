@@ -1,9 +1,9 @@
-[org 0x7c00]
+org 0x7c00
 
 mov ah, 0x0e
 
-mov bx, the_secret
-mov al, 'X'
+mov bx, my_string
+mov al, [bx]
 int 0x10
 
 jmp $

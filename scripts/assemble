@@ -1,6 +1,4 @@
 #!/bin/sh
-NAME=$1
-ASM_NAME="src/$NAME.asm"
-BIN_NAME="bin/$NAME.bin"
-nasm "$ASM_NAME" -f bin -o "$BIN_NAME"
-
+ASM_FILENAME=$1
+BIN_NAME=$2
+nasm "$ASM_FILENAME" -f bin -o "$BIN_NAME"

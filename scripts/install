@@ -1,0 +1,8 @@
+#!/bin/sh
+NAME=$1
+TARGET_DISK=$2
+ASM_NAME="src/$NAME.asm"
+BIN_NAME="bin/$NAME.bin"
+
+scripts/assemble "$ASM_NAME" "$BIN_NAME"
+scripts/write_to_disk "$BIN_NAME" "$TARGET_DISK"

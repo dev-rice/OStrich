@@ -1,0 +1,4 @@
+#!/bin/sh
+BIN_NAME=$1
+DISK_NAME=$2
+sudo dd if="$1" of="$2"

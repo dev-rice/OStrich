@@ -9,7 +9,7 @@ int 0x10
 jmp $
 
 my_string:
-    db 'Booting OS',0
+    db 'X'
 
 times 510-($-$$) db 0
 dw 0xaa55

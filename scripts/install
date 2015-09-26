@@ -5,4 +5,8 @@ ASM_NAME="src/$NAME.asm"
 BIN_NAME="bin/$NAME.bin"
 
 scripts/assemble "$ASM_NAME" "$BIN_NAME"
+
+xxd "$BIN_NAME"
+echo ""
+
 scripts/write_to_disk "$BIN_NAME" "$TARGET_DISK"

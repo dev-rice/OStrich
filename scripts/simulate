@@ -7,7 +7,4 @@ BIN_NAME="bin/$NAME.bin"
 mkdir -p bin
 scripts/assemble "$ASM_NAME" "$BIN_NAME"
 
-xxd "$BIN_NAME"
-echo ""
-
-scripts/write_to_disk "$BIN_NAME" "$TARGET_DISK"
+qemu-system-x86_64 "$BIN_NAME"

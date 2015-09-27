@@ -1,0 +1,3 @@
+#!/bin/sh
+DISK_NAME=$1
+sudo xxd "$DISK_NAME" | head -32

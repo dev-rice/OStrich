@@ -10,9 +10,6 @@ jmp $
 banner:
     db "Loading OStrich...", 0
 
-HEX_TABLE:
-    db "0123456789ABCDEF", 0
-
 ; Padding and magic BIOS number.
 
 times 510-($-$$) db 0

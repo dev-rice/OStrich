@@ -50,3 +50,6 @@ print_hex_char:
     popa
 
     ret
+
+HEX_TABLE:
+    db "0123456789ABCDEF", 0

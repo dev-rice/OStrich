@@ -1,14 +1,17 @@
 [org 0x7c00]
 
-mov bx, the_secret
-call print_string
+mov dx, banner
+call print_hex
 
 jmp $
 
-%include "src/print_string.asm"
+%include "src/print_hex.asm"
 
-the_secret:
+banner:
     db "Loading OStrich...", 0
+
+HEX_TABLE:
+    db "0123456789ABCDEF", 0
 
 ; Padding and magic BIOS number.
 

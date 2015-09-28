@@ -1,6 +1,8 @@
-; Set the ds register to 0x7c0, for real computer compatibility
-; This gets mutliplied by 16, so it ends up that the lowest address of the memory is at 0x7c00, right where BIOS loaded it to
-mov bx, 0x7c0
+; Tell the computer that this program starts at memory location 0x7c00 (where BIOS always puts it)
+[org 0x7c00]
+
+; Set the ds register to 0, for real computer compatibility. This makes sure that all of our memory access is related to 0x0000, instead of whatever ds was before.
+mov bx, 0
 mov ds, bx
 
 ; DO THINGS HERE!

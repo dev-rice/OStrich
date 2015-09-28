@@ -1,4 +1,5 @@
 print_string:
+    pusha
     ; bx contains the address of the string
     mov ah, 0x0e
 
@@ -18,4 +19,5 @@ print_string:
         jmp my_loop
 
     exit_loop:
+        popa
         ret
